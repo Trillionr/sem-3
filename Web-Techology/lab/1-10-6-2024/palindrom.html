@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var a = prompt("Enter a Number");
+        // var b = prompt("Enter b Number");
+        // var n = prompt("Enter / , * , + , - ,  Number");
+        var r
+        var rev=0
+        var n
+        var copy
+       var n = parseInt(prompt("enter a number:"));
+	copy=n;
+        while (n != 0) {
+          r = n % 10;
+          rev = rev * 10 + r;
+          n = parseInt(n / 10);
+        }
+	if(copy==rev)
+	{
+           document.write(" is palindrome a number");
+	}
+	else
+	{
+	   document.write(" is not palindrome a number");
+	}
+    </script>
+</body>
+</html>
