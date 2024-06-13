@@ -1,0 +1,2 @@
+Date : alt+shift+d
+Time : alt+shift+t
