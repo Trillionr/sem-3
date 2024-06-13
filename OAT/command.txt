@@ -1,2 +1,3 @@
 Date : alt+shift+d
 Time : alt+shift+t
+=rand(paregraph no,paregraph line)
