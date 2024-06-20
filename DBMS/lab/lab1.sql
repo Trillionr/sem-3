@@ -73,3 +73,28 @@ insert into Borrow values
 (321,'MADHURI','ANDHERI',2000.00),
 (375,'PRAMOD','VIRAR',8000.00),
 (481,'KRANTI','NEHRU PLACE',3000.00)
+
+
+
+-------lab 2------------------------
+
+select * from Deposite
+
+select * from Borrow
+
+select * from Customers
+
+select ActNo, Cname,AMOUNT from Deposite
+
+select loanno,amount from Borrow
+
+select * from Borrow where BNAME='ANDHERI'
+
+select ActNo,AMOUNT from Deposite where ACTNO=106
+
+select Cname from Borrow where amount > 5000
+
+select cname from Deposite where ADATE >'1996-dec-1'
+
+select cname from Deposite where ACTNO<105
+
