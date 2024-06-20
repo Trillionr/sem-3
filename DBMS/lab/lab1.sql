@@ -78,6 +78,7 @@ insert into Borrow values
 
 -------lab 2------------------------
 
+
 select * from Deposite
 
 select * from Borrow
@@ -98,3 +99,16 @@ select cname from Deposite where ADATE >'1996-dec-1'
 
 select cname from Deposite where ACTNO<105
 
+select *from Customers where CITY ='nagpur' or CITY='delhi'
+
+select * from Customers where city in ('delhi,nagpur') 
+
+select cname,bname from Deposite where AMOUNT>4000 and ACTNO<105
+
+select *from Borrow where AMOUNT>=3000 and AMOUNT<=8000
+
+select *from Borrow where AMOUNT between 3000 and 8000
+
+select *from Deposite where  not bname ='andheri'
+
+select actno , cname , amount from Deposite where bname in ('ajni ,karolbagh ,m.g.road') and actno<104;
