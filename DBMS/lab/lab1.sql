@@ -45,18 +45,18 @@ CITY VARCHAR(50)
 )
 
 insert into Customers values
-('ANIL ','CALCUTTA'),
+('ANIL','CALCUTTA'),
 ('SUNIL','DELHI'),
 ('MEHUL','BARODA'),
 ('MANDAR','PATNA'),
 ('MADHURI','NAGPUR'),
 ('PRAMOD','NAGPUR'),
 ('SANDIP','SURAT'),
-('SHIVANI',' BOMBAY'),
+('SHIVANI','BOMBAY'),
 ('KRANIT','BOMBAY'),
 ('NAREN','BOMBAY')
 
-
+drop table Customers
 
 create table Borrow(
 LOANNO INT,
@@ -75,40 +75,76 @@ insert into Borrow values
 (481,'KRANTI','NEHRU PLACE',3000.00)
 
 
+1) 	select * from Deposite
 
--------lab 2------------------------
+2)	select * from Borrow
 
+3)	select * from Customers
 
-select * from Deposite
+4)  select ActNo, Cname,AMOUNT from Deposite
 
-select * from Borrow
+5)  select loanno,amount from Borrow
 
-select * from Customers
+6)  select * from Borrow where BNAME='ANDHERI'
 
-select ActNo, Cname,AMOUNT from Deposite
+7)  select ActNo,AMOUNT from Deposite where ACTNO=106
 
-select loanno,amount from Borrow
+8)  select Cname from Borrow where amount > 5000
 
-select * from Borrow where BNAME='ANDHERI'
+9)  select cname from Deposite where ADATE >'1996-dec-1'
 
-select ActNo,AMOUNT from Deposite where ACTNO=106
+10) select cname from Deposite where ACTNO<105
 
-select Cname from Borrow where amount > 5000
+11) select *from Customers where CITY ='nagpur' or CITY='delhi'
 
-select cname from Deposite where ADATE >'1996-dec-1'
+12) select * from Customers where city in ('delhi,nagpur') 
 
-select cname from Deposite where ACTNO<105
+13) select cname,bname from Deposite where AMOUNT>4000 and ACTNO<105
 
-select *from Customers where CITY ='nagpur' or CITY='delhi'
+14) select *from Borrow where AMOUNT>=3000 and AMOUNT<=8000
 
-select * from Customers where city in ('delhi,nagpur') 
+15) select *from Borrow where AMOUNT between 3000 and 8000
 
-select cname,bname from Deposite where AMOUNT>4000 and ACTNO<105
+16) select *from Deposite where  not bname ='andheri'
 
-select *from Borrow where AMOUNT>=3000 and AMOUNT<=8000
+17) select actno , cname , amount from Deposite where bname in ('ajni ,karolbagh ,m.g.road') and actno<104;
 
-select *from Borrow where AMOUNT between 3000 and 8000
+--part B--------------------------------------------------------
 
-select *from Deposite where  not bname ='andheri'
+1)  select top 5 *from Deposite
+	
+2)  select top 3 *from Deposite where AMOUNT >1000
 
-select actno , cname , amount from Deposite where bname in ('ajni ,karolbagh ,m.g.road') and actno<104;
+3)  select top 5 loanno , cname    from Borrow where bname <> 'andheri'
+
+4)  select  distinct city from Customers
+
+	select *from Branch
+
+5)  select  distinct Bname from Branch
+
+--part c -----------------------------------------------------
+
+	select * from Borrow
+
+1)  select top 50 percent *from Borrow
+
+	select *from Deposite
+
+2)  select top 10 percent amount from Deposite
+
+3)  select top 25 percent *from Deposite where AMOUNT>5000 
+ 
+4)  select top 10 percent amount from Borrow
+	
+	select *from Customers
+
+5)  select  distinct cname ,city from Customers
+
+	select *from Borrow
+
+6)  select ((amount*0.1)+ amount) from Borrow 
+
+7)  select loanno from Borrow where loanno%2=0
+
+7)  select loanno from Borrow where loanno%2!=0
