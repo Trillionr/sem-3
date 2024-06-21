@@ -148,3 +148,36 @@ insert into Borrow values
 7)  select loanno from Borrow where loanno%2=0
 
 7)  select loanno from Borrow where loanno%2!=0
+
+
+--lab-3-----------------------------------------------------
+
+--part-A-----------------------------------------
+
+create table Cricket(
+Name VARCHAR(50),
+City VARCHAR(50),
+Age int
+)
+
+insert into Cricket values 
+('Sachin Tendulkar','Mumbai',30),
+('Rahul Dravid','Bombay',35),
+('M. S. Dhoni','Jharkhand',31),
+('Suresh Raina','Gujarat',30)
+
+select *from Cricket
+
+1)  select * into Worldcup from Cricket
+
+select * from Worldcup
+
+2)  select Name,city into T20 from Cricket 
+    where 1=0
+
+	select *from T20
+
+3)  select * into IPL from Cricket where 1=0 
+
+	select *from IPL
+
