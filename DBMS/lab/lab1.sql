@@ -181,3 +181,137 @@ select * from Worldcup
 
 	select *from IPL
 
+--part-B------------------------
+
+
+create table Employee(
+Name VARCHAR(50),
+City VARCHAR(50),
+Age int
+)
+
+insert into Employee values 
+('Jay Patel','Rajkot',30),
+('Rahul Dave','Baroda',35),
+('Jeet Patel','Surat',31),
+('Vijay Raval','Rajkot',30)
+
+select * from Employee
+
+1)  select * into Employee_detail from Employee
+
+2)  select Name,City  into Employee_data from Employee
+	where 1=0
+
+3)  select *into Employee_info from Employee
+	where 1=0
+ 
+ --part-c-------------------
+
+1)  insert into Employee_info select *from Employee 
+	where City ='Rajkot'
+	--select *from Employee_info 
+
+2)  insert into Employee_info select *from Employee 
+	where Age>32
+
+
+
+	--update operation-------------------------
+
+	--part-a-----------------------------------
+
+	select *from Deposite
+
+1)	update Deposite 
+	set AMOUNT =5000
+	where AMOUNT=3000
+
+	select *from  Borrow
+
+2)	update Borrow 
+	set BNAME='C.G. Road'
+	where CNAME='ANIL'
+
+
+	select *from Deposite
+
+3)	update Deposite
+	set ACTNO=111 , AMOUNT=5000
+	where CNAME='SANDIP'
+
+4)	update Deposite
+	set AMOUNT=7000
+	where CNAME='KRANTI'
+
+	select *from Branch
+
+5)	update Branch
+	set BNAME ='ANDHERI WEST'
+	where BNAME='ANDHERI'
+
+	select * from Deposite
+6)	update Deposite
+	set BNAME =' NEHRU PALACE'
+	where CNAME='MEHUL'
+
+	select * from Deposite
+
+7)	update Deposite
+	set AMOUNT =5000
+	where ACTNO BETWEEN 103 AND 107
+
+	select * from Deposite
+
+8)	update Deposite
+	set ADATE='1995-04-01'
+	where CNAME ='ANIL'
+
+9)	update Deposite
+	set AMOUNT=1000
+	where CNAME ='MINU'
+
+10)	update Deposite
+	set AMOUNT=5000 , ADATE='1996-04-01'
+	where CNAME ='PRAMOD'
+
+	--part-b------------------------------------------
+
+	select * from Borrow
+1)	select ((amount*0.1)+ amount) from Borrow
+	
+	select *from Deposite
+2)	select ((amount*0.2)+ amount) from Deposite
+
+
+	--c-----------------------------------
+	
+1)	update Borrow
+	set LOANNO = NULL
+	where LOANNO=321
+
+	select *from Borrow
+
+2)	update Borrow
+	set CNAME = NULL
+	where CNAME='KRANTI'
+
+3)	select *from Borrow 
+	where AMOUNT ='null'
+
+4)	select  BNAME from Borrow
+
+5)	update Borrow
+	set BNAME='VRCE',CNAME='Darshan',AMOUNT=5000
+	where LOANNO=481
+
+
+	select *from Deposite
+	
+6)	update Deposite
+	set ADATE='2021-01-01'
+	where AMOUNT>2000
+
+7)	UPDATE Deposite
+	SET ADATE = 'NULL', BNAME = 'ANDHERI'
+	WHERE ACTNO = 110;
