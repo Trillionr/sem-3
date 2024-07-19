@@ -1,0 +1,42 @@
+select *from EMP
+
+
+--1. Display the Highest, Lowest, Label the columns Maximum, Minimum respectively.
+select max(Salary) as maximum,min(Salary) as minimum from EMP
+
+--2. Display Total, and Average salary of all employees. Label the columns Total_Sal and Average_Sal,
+--respectively.
+select sum(Salary) as Total_Sal,avg(Salary) as Average_Sal from EMP
+
+--3. Find total number of employees of EMPLOYEE table.
+select count(EID) as countNO from EMP
+
+--4. Find highest salary from Rajkot city.
+select max(Salary) as MaxinCity from EMP where City = 'Rajkot'
+--5. Give maximum salary from IT department.
+select max(Salary) as maxIt from EMP  where Department='IT'
+--6. Count employee whose joining date is after 8-feb-91.
+select count(EID)  from EMP  where JoiningDate > '8-feb-91'
+
+--7. Display average salary of Admin department.
+select avg(Salary) as AdminDepartment from EMP where Department = 'Admin'
+--8. Display total salary of HR department.
+select sum(Salary) as total from EMP where Department = 'HR'
+--9. Count total number of cities of employee without duplication.
+select count(distinct (city)) from EMP
+--10. Count unique departments.
+select count(distinct (Department)) from EMP
+--11. Give minimum salary of employee who belongs to Ahmedabad.
+select min(Salary) as MinCity from EMP where City = 'Ahmedabad'
+--12. Find city wise highest salary.
+select City,max(Salary) as citywise from EMP group by City
+--13. Find department wise lowest salary.
+select Department,min(Salary) as Departmentwise from EMP group by Department
+--14. Display city with the total number of employees belonging to each city.
+select City,count(City) from EMP group by City
+
+--15. Give total salary of each department of EMP table.
+select Department,sum(Salary) from EMP group by Department
+--16. Give average salary of each department of EMP table without displaying the respective department
+--name.
+select avg(Salary) as average from EMP group by Department
